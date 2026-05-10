@@ -2,6 +2,10 @@
 setlocal
 chcp 65001 >nul
 
+set "PAPERCUT_USER=用户名"
+set "PAPERCUT_PASS=密码"
+set "DEFAULT_CHOICE=1"
+set "BROWSER=msedge"
 
 if "%~1"=="" (
   echo Please drag one or more files onto this script to upload.
@@ -18,12 +22,6 @@ for %%F in (%*) do (
     goto :eof
   )
 )
-
-
-set "PAPERCUT_USER=用户名"
-set "PAPERCUT_PASS=密码"
-set "DEFAULT_CHOICE=1"
-set "BROWSER=msedge"
 
 
 if "%PAPERCUT_USER%"=="用户名" (

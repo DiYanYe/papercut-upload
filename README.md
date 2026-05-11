@@ -15,7 +15,7 @@
        可以修改`set "DEFAULT_CHOICE=1"`，把1改成你想要的默认打印机编号。编号对应如下：
        
         1：win-vccfcnbjej2\PaperCut-WebPrint （虚拟） 
-        
+       
         2：win-vccfcnbjej2\PaperCut-WebPrint-彩色双面 （虚拟） 
         
         3：win-vccfcnbjej2\PaperCut-WebPrint-黑白 （虚拟）	 
@@ -29,7 +29,7 @@
     
     **法1：** 直接把要打印的文件拖到`papercut_upload.cmd` 上（可选中多文件后一起拖入），输入打印机编号，按回车后会自动把要打印的文件上传到papercut网页。若直接输入回车，会选择默认打印机打印。
     
-    **法2：** 在命令行运行（可多文件）：papercut_upload.cmd "C:\path\a.pdf" "C:\path\b.docx"
+    **法2：** 在命令行运行（可多文件）：`papercut_upload.cmd "C:\path\a.pdf" "C:\path\b.docx"`
 
 4. **补充说明：**
 	1. 本程序没有修改打印份数的功能，所以打印份数默认为1，可以在打印的时候直接在打印机上修改打印份数。

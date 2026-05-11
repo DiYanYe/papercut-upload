@@ -97,6 +97,3 @@ call playwright-cli -s=webprint run-code "async page => { await page.getByRole('
 echo Done. The job should now be in the queue.
 del /q "%CLI_CONFIG%" >nul 2>&1
 endlocal
-goto :eof
-
-endlocal

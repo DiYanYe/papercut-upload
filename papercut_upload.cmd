@@ -85,18 +85,13 @@ call playwright-cli -s=webprint run-code "async page => { const papercutUser = '
 
 REM Upload each file sequentially
 for %%F in (%*) do (
-  call playwright-cli -s=webprint run-code "async page => { await page.getByRole('button', { name: '从电脑上传' }).waitFor({ state: 'visible', timeout: 30000 }); }"
-  
+  call playwright-cli -s=webprint run-code "async page => { await page.getByRole('button', { name: '从电脑上传' }).click(); }"
   call playwright-cli -s=webprint click "getByRole('button', { name: '从电脑上传' })"
-  
   call playwright-cli -s=webprint upload "%%~fF"
-  
 )
 
 REM Finalize and submit
-call playwright-cli -s=webprint run-code "async page => { await page.getByRole('button', { name: '上传及完成 »' }).waitFor({ state: 'visible', timeout: 30000 }); }"
-
-call playwright-cli -s=webprint click "getByRole('button', { name: '上传及完成 »' })"
+call playwright-cli -s=webprint run-code "async page => { await page.getByRole('button', { name: '上传及完成 »' }).click(); }"
 
 
 echo Done. The job should now be in the queue.
